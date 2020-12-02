@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qiluruanjianyuan.crm.settings.dao.UserDao"><!--必须是接口的全限定名称-->
+	<select id="login" resultType="User">/*里边内容不能乱写，因为我们传的是map中的key*/
+        select * from tbl_user where loginAct=#{loginAct} and loginPwd=#{loginPwd}
+    </select>
+    <select id="getUserList" resultType="User">
+        select * from tbl_user/*这个查询是在市场模块查询的用户信息，所在调用的是user的业务层，所以在这*/
+    </select>
+	
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
